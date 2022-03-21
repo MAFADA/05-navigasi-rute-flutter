@@ -20,11 +20,22 @@ class ListItem extends StatelessWidget {
           margin: EdgeInsets.all(8),
           child: Row(
             children: [
-              Expanded(child: Text(item.name)),
+              Expanded(
+                child: Container(
+                  child: Image(
+                    image: AssetImage(item.pics),
+                  ),
+                ),
+              ),
               Expanded(
                   child: Text(
-                item.price.toString(),
-                textAlign: TextAlign.end,
+                item.name,
+                textAlign: TextAlign.right,
+              )),
+              Expanded(
+                  child: Text(
+                item.downloaded.toString() + " M+",
+                textAlign: TextAlign.center,
               )),
             ],
           ),

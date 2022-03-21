@@ -8,12 +8,37 @@ class ItemPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("2031710168, M. Afada Nur Saiva Syahira"),
+        backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Container(
+        margin: EdgeInsets.only(bottom: 20),
+        alignment: Alignment.center,
         child: Column(
           children: [
-            Expanded(child: Text(args.name)),
-            Expanded(child: Text(args.price.toString())),
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.deepPurpleAccent,
+                  image: DecorationImage(
+                    image: AssetImage(args.pics),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+                child: Container(
+              child: Text(
+                args.name +
+                    '\n \n Downloaded' +
+                    '\n' +
+                    args.downloaded.toString() +
+                    ' M+\n\n' +
+                    args.descript,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+            )),
           ],
         ),
       ),

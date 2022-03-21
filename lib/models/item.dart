@@ -1,6 +1,12 @@
 class Item {
   String name;
-  int price;
+  int downloaded;
+  String pics;
+  String descript;
 
-  Item({required this.name, required this.price});
+  Item(
+      {required this.name,
+      required this.downloaded,
+      required this.pics,
+      required this.descript});
 }
